@@ -3,7 +3,7 @@
 var gl;
 var points;
 
-var NumPoints = 255000;
+var NumPoints = 100;
 
 window.onload = function init()
 {
@@ -19,7 +19,7 @@ window.onload = function init()
     // First, initialize the corners of our gasket with three points.
 
     var vertices = [
-        vec2( -1, -1 ),
+        vec2( 100, 100 ),
         vec2(  0,  1 ),
         vec2(  1, -1 )
     ];
