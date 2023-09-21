@@ -45,8 +45,10 @@ window.onload = function init()
 
 
 function render() {
-    gl.clear( gl.COLOR_BUFFER_BIT );
-
-    gl.uniform4fv(colorMap, vec4(Math.random(), Math.random(), Math.random(), 1.0));
-    gl.drawArrays( gl.TRIANGLES, 0, 3 );
+    setTimeout(function() {
+        requestAnimationFrame(render);
+        gl.clear( gl.COLOR_BUFFER_BIT );
+        gl.uniform4fv(colorMap, vec4(Math.random(), Math.random(), Math.random(), 1.0));
+        gl.drawArrays( gl.TRIANGLES, 0, 3 );
+    }, 1000);
 }
