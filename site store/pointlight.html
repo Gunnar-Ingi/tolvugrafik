@@ -135,6 +135,15 @@
 			const animate = function () {
 				requestAnimationFrame( animate );
 
+                // Stiff animation
+                if(ball.position.y < 1) {
+                    ball.position.y += 0.2;
+                }
+                else{
+                    ball.position.y -= 1;
+                }
+
+
                 controls.update();
 				renderer.render( scene, camera );
 			};
